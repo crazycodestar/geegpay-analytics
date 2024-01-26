@@ -5,8 +5,8 @@ import cooper from "../assets/cooper.jpeg";
 import phillip from "../assets/phillip.jpeg";
 const OrdersTable = () => {
 	return (
-		<div className="bg-white col-span-5 dark:bg-[#0D0D0D] border rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] pt-[18px] pb-[31px] px-[20px] flex gap-[14px] flex-col w-full lg:w-fit h-fit">
-			<div className="flex items-center justify-between lg:w-[520px] xl:w-[766px]">
+		<div className="bg-white col-span-5 dark:bg-[#0D0D0D] border rounded-[14px] border-[#EDF2F7] dark:border-[#1A1A1A] pt-[18px] pb-[31px] px-[20px] flex gap-[14px] flex-col w-full h-fit">
+			<div className="flex items-center justify-between">
 				<h2 className="text-[#26282C] dark:text-[#D3D5D9] text-md lg:text-lg  font-semibold">
 					Last Orders
 				</h2>
@@ -15,9 +15,9 @@ const OrdersTable = () => {
 				</h2>
 			</div>
 
-			<div className="w-full md:flex items-center justify-center overflow-hidden overflow-y-auto overflow-x-auto sm:w-full lg:w-[520px] xl:w-full">
-				<div className="flex items-center justify-center w-[766px] lg:w-full">
-					<table className="w-full lg:w-[766px] text-sm text-left text-gray-500 overflow-x-auto overflow-clip">
+			<div className="items-center justify-center w-full overflow-hidden overflow-x-auto overflow-y-auto md:flex sm:w-full xl:w-full">
+				<div className="flex items-center justify-center w-full">
+					<table className="w-full overflow-x-auto text-sm text-left text-gray-500 overflow-clip">
 						<thead className="text-xxs font-bold text-gray-700 border-b border-[#EDF2F6] dark:border-[#1A1A1A] bg-transparent ">
 							<tr>
 								<th
