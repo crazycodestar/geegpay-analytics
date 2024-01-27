@@ -62,6 +62,25 @@ const data = [
 
 const weeklyData = [
 	{
+		x: "Week1",
+		y: 27800,
+	},
+	{
+		x: "Week2",
+		y: 35000,
+	},
+	{
+		x: "Week3",
+		y: 42000,
+	},
+	{
+		x: "Week4",
+		y: 12000,
+	},
+];
+
+const dailyData = [
+	{
 		x: "Mon",
 		y: 3000,
 	},
@@ -93,12 +112,14 @@ const weeklyData = [
 
 const BarChart = () => {
 	const options = {
-		daily: weeklyData,
+		daily: dailyData,
+		weekly: weeklyData,
 		monthly: data,
 	} as const;
 	type Options = keyof typeof options;
 
-	const [dataType, setDataType] = useState<Options>("daily");
+	const defaultStats = Object.keys(options)[1] as Options;
+	const [dataType, setDataType] = useState<Options>(defaultStats);
 
 	const handleSelectData = (option: Options) => setDataType(option);
 
@@ -115,7 +136,7 @@ const BarChart = () => {
 					</h4>
 					<Select
 						onValueChange={(value: Options) => handleSelectData(value)}
-						defaultValue={Object.keys(options)[0]}
+						defaultValue={defaultStats}
 					>
 						<SelectTrigger className="w-[180px]">
 							<SelectValue
