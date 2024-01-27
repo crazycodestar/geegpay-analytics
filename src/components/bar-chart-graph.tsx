@@ -7,10 +7,7 @@ import {
 	YAxis,
 	ResponsiveContainer,
 	CartesianGrid,
-	Cell,
-	Tooltip,
-	// ResponsiveContainer,
-	// Tooltip,
+	BarProps,
 } from "recharts";
 
 interface AnalyticalBarChartProps {
@@ -65,12 +62,65 @@ const renderCustomYAxisTick = ({ x, y, payload }: RenderCustormAxisTick) => {
 	);
 };
 
+const getPath = (
+	x: BarProps["x"],
+	y: BarProps["y"],
+	width: BarProps["width"],
+	height: BarProps["height"]
+) => {
+	if (
+		typeof x != "number" ||
+		typeof y != "number" ||
+		typeof width != "number" ||
+		typeof height != "number"
+	)
+		return;
+
+	console.log("new", x, y, width, height);
+
+	return `M${x + 0.727539} ${y + 15}C${x + 0.727539} ${y + 6.71572} ${
+		x + 7.44327
+	} ${y + 0} ${x + 15.7275} ${y + 0}C${x + 24.0118} ${y + 0} ${x + 30.7275} ${
+		y + 6.71573
+	} ${x + 30.7275} ${y + 15}V${y + height}H${x + 0.727539}V${y + 15}Z`;
+};
+
+const RectanglarRoundedBar = (props: BarProps) => {
+	const [isActive, setIsActive] = useState(false);
+	const { x, y, width, height } = props;
+	return (
+		<>
+			<path
+				onMouseEnter={() => setIsActive(true)}
+				onMouseLeave={() => setIsActive(false)}
+				d={getPath(x, y, width, height)}
+				// fill="url(#paint0_linear_2126_1974)"
+				fill={isActive ? "url(#paint0_linear_2126_1974)" : "#34CAA5"}
+				fillOpacity={isActive ? 1 : 0.1}
+			/>
+			<defs>
+				<linearGradient
+					id="paint0_linear_2126_1974"
+					x1="15.7275"
+					y1="0"
+					x2="15.7275"
+					y2="216"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop stop-color="#34CAA5" />
+					<stop offset="1" stop-color="#34CAA5" stop-opacity="0" />
+				</linearGradient>
+			</defs>
+		</>
+	);
+};
+
 const AnalyticalBarChart = (props: AnalyticalBarChartProps) => {
 	const { data } = props;
-	const [activeBar, setActiveBar] = useState<number | undefined>();
+	// const [activeBar, setActiveBar] = useState<number | undefined>();
 
-	const handleSetActiveBar = (_: unknown, index: number) => setActiveBar(index);
-	const handleRemoveActiveBar = () => setActiveBar(undefined);
+	// const handleSetActiveBar = (_: unknown, index: number) => setActiveBar(index);
+	// const handleRemoveActiveBar = () => setActiveBar(undefined);
 
 	return (
 		<ResponsiveContainer width="100%" height="100%">
@@ -96,22 +146,11 @@ const AnalyticalBarChart = (props: AnalyticalBarChartProps) => {
 					interval={"equidistantPreserveStart"}
 					type="number"
 				/>
-				<Tooltip />
 				<Bar
+					barSize={30}
+					shape={<RectanglarRoundedBar dataKey={1} />}
 					dataKey="y"
-					onMouseEnter={handleSetActiveBar}
-					onMouseLeave={handleRemoveActiveBar}
-				>
-					{data.map((_, index) => (
-						<Cell
-							cursor="pointer"
-							// width={30}
-							radius={"200px, 20, 0, 0"}
-							fill={index === activeBar ? "#34CAA5" : "#34CAA519"}
-							key={`cell-${index}`}
-						/>
-					))}
-				</Bar>
+				/>
 			</BarChart>
 		</ResponsiveContainer>
 	);
