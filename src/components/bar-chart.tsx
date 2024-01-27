@@ -135,7 +135,7 @@ const BarChart = () => {
 					</Select>
 				</div>
 			</div>
-			<div className="flex-1">
+			<div className="h-[200px] w-full lg:h-auto lg:flex-1">
 				<AnalyticalBarChart data={options[dataType]} />
 			</div>
 		</div>

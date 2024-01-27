@@ -27,7 +27,7 @@ const Sidebar = () => {
             </svg>
 					</div>
 
-					<div className="py-[8px] cursor-pointer">
+					<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 						{/* prettier-ignore */}
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M2 12.98V15C2 20 4 22 9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -37,7 +37,7 @@ const Sidebar = () => {
             </svg>
 					</div>
 
-					<div className="py-[8px] cursor-pointer">
+					<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 						{/* prettier-ignore */}
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12.6801 3.96C13.1601 4.67 13.4401 5.52 13.4401 6.44C13.4301 8.84 11.5401 10.79 9.16006 10.87C9.06006 10.86 8.94006 10.86 8.83006 10.87C6.45006 10.79 4.56006 8.84 4.56006 6.44C4.56006 3.99 6.54006 2 9.00006 2" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,7 +47,7 @@ const Sidebar = () => {
             </svg>
 					</div>
 
-					<div className="py-[8px] cursor-pointer">
+					<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 						{/* prettier-ignore */}
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M3.16992 7.44006L11.9999 12.55L20.7699 7.47003" stroke="#B7B0B0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -57,7 +57,7 @@ const Sidebar = () => {
             </svg>
 					</div>
 
-					<div className="py-[8px] cursor-pointer">
+					<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 						{/* prettier-ignore */}
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M14.6599 20.01L13.1399 21.53C12.5199 22.15 11.4999 22.15 10.8799 21.53L9.3599 20.01C9.0999 19.75 8.58992 19.54 8.22992 19.54H6.0799C5.1999 19.54 4.47992 18.8199 4.47992 17.9399V15.79C4.47992 15.43 4.26992 14.92 4.00992 14.66L2.4899 13.14C1.8699 12.52 1.8699 11.5 2.4899 10.88L4.00992 9.35999C4.26992 9.09999 4.47992 8.58998 4.47992 8.22998V6.07996C4.47992 5.19996 5.1999 4.47998 6.0799 4.47998" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -68,7 +68,7 @@ const Sidebar = () => {
             </svg>
 					</div>
 
-					<div className="py-[8px] cursor-pointer">
+					<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 						{/* prettier-ignore */}
 						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M12 8V13" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -76,12 +76,13 @@ const Sidebar = () => {
             <path d="M11.9946 16H12.0036" stroke="#B2ABAB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
 					</div>
+
 					<DarkModeSwitch />
 				</div>
 			</div>
 
 			<div className="flex flex-col gap-[16px] w-full items-center justify-center">
-				<div className="py-[8px] cursor-pointer">
+				<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 					{/* prettier-ignore */}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M8.5 12H14.5" stroke="#B2ABAB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,7 +91,7 @@ const Sidebar = () => {
             </svg>
 				</div>
 
-				<div className="py-[8px] cursor-pointer">
+				<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 					{/* prettier-ignore */}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M15 12C15 10.34 13.66 9 12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C12.41 15 12.81 14.92 13.17 14.76" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -99,7 +100,7 @@ const Sidebar = () => {
             </svg>
 				</div>
 
-				<div className="py-[8px] cursor-pointer">
+				<div className="p-[8px] rounded-full hover:bg-[#B2ABAB]/20 cursor-pointer">
 					{/* prettier-ignore */}
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M6.56 14.5599L4 11.9999L6.56 9.43994" stroke="#B2ABAB" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>

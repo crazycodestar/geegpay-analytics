@@ -146,6 +146,7 @@ const AnalyticalBarChart = (props: AnalyticalBarChartProps) => {
 					interval={"equidistantPreserveStart"}
 					type="number"
 				/>
+				{/* <Tooltip content={<CustomTooltip />} /> */}
 				<Bar
 					barSize={30}
 					shape={<RectanglarRoundedBar dataKey={1} />}

@@ -50,28 +50,29 @@ const Navbar = () => {
 					Dashboard
 				</h1>
 				<div
-					className="border dark:border-[#262626] cursor-pointer border-[#DADDDD] lg:hidden flex items-center justify-center px-[15px] py-[18px] rounded-full"
+					className="border hover:bg-[#B2ABAB]/10 cursor-pointer border-[#DADDDD] dark:border-[#262626] lg:hidden flex items-center justify-center px-[15px] py-[18px] rounded-full"
 					onClick={() => setOpen(!open)}
 				>
 					{/* prettier-ignore */}
 					<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="0.5" width="15" height="2" rx="1" className="fill-[#78828A] dark:fill-[#171823]"/>
+            <rect className="fill-[#78828A] dark:fill-" x="0.5" width="15" height="2" rx="1" />
             <rect x="0.5" y="4" width="15" height="2" rx="1" fill="#78828A"/>
             <rect x="0.5" y="8" width="15" height="2" rx="1" fill="#78828A"/>
             </svg>
 				</div>
 
-				<div className="flex flex-col md:flex-row items-center justify-center gap-[22px]">
-					<div className="relative hidden lg:block">
+				<div className="flex gap-2 flex-row items-center justify-center sm:gap-[22px]">
+					<div className="relative block">
 						<div className="absolute inset-y-0 start-0 flex items-center ps-[16px] pointer-events-none">
 							{/* prettier-ignore */}
-							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 1C12.9293 1 16.3781 4.3727 16.3781 8.51907C16.3781 10.4753 15.6104 12.2595 14.3542 13.5986L16.8261 16.0109C17.0574 16.2371 17.0582 16.6031 16.8269 16.8294C16.7116 16.9436 16.5592 17 16.4076 17C16.2568 17 16.1052 16.9436 15.9892 16.8309L13.4874 14.3912C12.1714 15.4219 10.5028 16.0389 8.68945 16.0389C4.44955 16.0389 1 12.6655 1 8.51907C1 4.3727 4.44955 1 8.68945 1ZM8.68945 2.15821C5.10251 2.15821 2.18433 5.01125 2.18433 8.51907C2.18433 12.0269 5.10251 14.8807 8.68945 14.8807C12.2756 14.8807 15.1938 12.0269 15.1938 8.51907C15.1938 5.01125 12.2756 2.15821 8.68945 2.15821Z" fill="#78828A"/>
+							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M11.5 2C16.75 2 21 6.25 21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 7.8 4.11 4.6 7.2 3.03" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 22L20 20" stroke="#78828A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
 						</div>
 						<input
 							type="text"
-							className="block w-[250px] xl:w-[333px] p-3 ps-10 text-base dark:text-[#A3A3A3] text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] dark:border-[#2E3232] bg-white dark:bg-[#0D0D0D] placeholder:text-[#A3A3A3] dark:placeholder:text-[#A3A3A3]"
+							className="block w-[250px] hover:bg-[#B2ABAB]/10 dark:hover:bg-[#B2ABAB]/10 xl:w-[333px] p-3 ps-10 text-base dark:text-[#A3A3A3] text-[#A3A3A3] border border-[#DADDDD] rounded-[24px] dark:border-[#2E3232] bg-white dark:bg-[#0D0D0D] placeholder:text-[#A3A3A3] dark:placeholder:text-[#A3A3A3]"
 							placeholder="Search..."
 							required
 						/>
@@ -148,24 +149,26 @@ const Navbar = () => {
 						</DropdownMenuContent>
 					</DropdownMenu>
 					<DropdownMenu>
-						<DropdownMenuTrigger className="cursor-pointer hidden lg:flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] rounded-full px-[8px] py-[4px]">
+						<DropdownMenuTrigger className="cursor-pointer flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] rounded-full px-[8px] py-[4px]">
 							<Avatar>
 								{DATA.image ? (
 									<AvatarImage src={DATA.image} alt="image" />
 								) : null}
 								<AvatarFallback>JB</AvatarFallback>
 							</Avatar>
-							<div className="flex gap-[1px] flex-col items-end justify-center inter">
+							<div className="hidden md:flex gap-[1px] flex-col items-end justify-center inter">
 								<h3 className="text-base text-[#26282C] dark:text-[#D3D5D9]">
 									Justin Bergson
 								</h3>
 								<h4 className="text-sm text-[#787486]">Justin@gmail.com</h4>
 							</div>
 
-							{/* prettier-ignore */}
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" className="pl-2 w-fit">
+							<div className="hidden sm:flex">
+								{/* prettier-ignore */}
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" className="pl-2 w-fit">
             <path d="M3.19841 6.20675C3.43891 5.95614 3.81525 5.93336 4.08045 6.1384L4.15643 6.20675L10 12.2955L15.8436 6.20675C16.0841 5.95614 16.4604 5.93336 16.7256 6.1384L16.8016 6.20675C17.0421 6.45735 17.064 6.84951 16.8672 7.12585L16.8016 7.20502L10.479 13.7933C10.2385 14.0439 9.86217 14.0666 9.59697 13.8616L9.52099 13.7933L3.19841 7.20502C2.93386 6.92935 2.93386 6.48241 3.19841 6.20675Z" fill="#0D062D"/>
             </svg>
+							</div>
 						</DropdownMenuTrigger>
 						<DropdownMenuContent>
 							<DropdownMenuGroup>
@@ -187,27 +190,6 @@ const Navbar = () => {
 							</DropdownMenuItem>
 						</DropdownMenuContent>
 					</DropdownMenu>
-					<div className="flex items-center justify-center gap-5 lg:hidden b order">
-						{/* <img
-              src={profile}
-              alt=""
-              className="w-[47px] h-[47px] rounded-full justify-center object-cover bg-cover bg-center"
-            /> */}
-						<div className="cursor-pointer flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] rounded-full px-[16px] py-[16px]">
-							{/* prettier-ignore */}
-							<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.68945 1C12.9293 1 16.3781 4.3727 16.3781 8.51907C16.3781 10.4753 15.6104 12.2595 14.3542 13.5986L16.8261 16.0109C17.0574 16.2371 17.0582 16.6031 16.8269 16.8294C16.7116 16.9436 16.5592 17 16.4076 17C16.2568 17 16.1052 16.9436 15.9892 16.8309L13.4874 14.3912C12.1714 15.4219 10.5028 16.0389 8.68945 16.0389C4.44955 16.0389 1 12.6655 1 8.51907C1 4.3727 4.44955 1 8.68945 1ZM8.68945 2.15821C5.10251 2.15821 2.18433 5.01125 2.18433 8.51907C2.18433 12.0269 5.10251 14.8807 8.68945 14.8807C12.2756 14.8807 15.1938 12.0269 15.1938 8.51907C15.1938 5.01125 12.2756 2.15821 8.68945 2.15821Z" fill="#78828A"/>
-              </svg>
-						</div>
-
-						<div className="cursor-pointer flex gap-[8px] items-center justify-center border-[0.769px] border-[#DADDDD] rounded-full px-[6px] py-[6px]">
-							<img
-								src={profile}
-								alt=""
-								className="w-[38px] h-[38px] rounded-full justify-center object-cover bg-cover bg-center"
-							/>
-						</div>
-					</div>
 				</div>
 			</nav>
 
